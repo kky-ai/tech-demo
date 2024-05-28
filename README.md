@@ -6,9 +6,15 @@ Demonstration of selected KKY-AI technologies.
 - Jan Švec <honzas@kky.zcu.cz>
 - Pavel Ircing <ircing@kky.zcu.cz>
 
+#### [Slides](https://edu.kitt.ai/talk/c4dhi/)
+---
+
 ### Speech Technologies (ASR, TTS)
 ---
-We provide a REST API for both, ASR and TTS. You can recognize speech from file and synthesize a textual prompt.
+We provide a REST API for both, ASR and TTS. You can recognize speech from file and synthesize a textual prompt. We show real-time applications as well as static API calls from Python.
+
+#### [Real-time DEMO - English](https://prod.speechcloud.kky.zcu.cz:9444/index.html?devel/bulinm/robot-v1-en)
+#### [Real-time DEMO - Czech](https://prod.speechcloud.kky.zcu.cz:9444/index.html?devel/bulinm/robot-v1-cs)
 
 ### AQ: Asking Questions model
 ---
@@ -62,24 +68,9 @@ Q0: How many siblings do you have?
 [1.2738] What did you have for lunch?
 ```
 
-### SC: Lindat Translation
+### LINDAT Translation
 ---
 This is an example of how to use the LINDAT translator API from Python.
-
-```
-from requests import post
-
-BASE_URL = 'https://lindat.cz/services/translation/api/v2/languages/'
-
-def translate(text, src='cs', tgt='en'):
-    translator_url = f'{BASE_URL}?src={src}&tgt={tgt}'
-    ret = post(translator_url, data = {'input_text': text})
-    return ret.content.decode('utf-8').strip()
-
-print(translate('Jak se jmenoval váš otec?'))
-
->> What was your father's name?
-```
 
 ### ChatGPT API from Python
 ---
@@ -87,4 +78,4 @@ This is a simple example of how to call the OpenAI-ChatGPT API from Python.
 
 ### RAG with LLM (Proof-of-concept DEMO)
 ---
-todo
+Retrieval-Augmented Generation with ChatGPT
