@@ -41,6 +41,8 @@ Was Ed Ryder convicted of the murder he was sentenced for?
 
 ### SC: Semantic Continuity model
 ---
+- Note: The trained SC model needs a specific version of tensorflow (2.6.2 or 2.7.0), which is unfortunately not compatible with Python 3.10 used within Colab. You can test this model on your local machine.
+
 In a semantic point of view, does the answer follow the question well? We have a measure. It is a distance (the lower the better).
 
 ```
